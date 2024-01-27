@@ -35,7 +35,7 @@ def load_test_data(file_path):
 
 
 
-test_data = load_test_data('testing.csv')
+test_data = load_test_data('sample_tests.csv')
 
 class TestHyperbolicNavigator:
     @pytest.fixture
