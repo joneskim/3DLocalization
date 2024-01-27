@@ -1,7 +1,5 @@
 """
-Written by: Joneskim Kimo
-Date: 2024-01-26
-For analyzing the data from RNO-G
+Written by Joneskim Kimo for RNO-G vertex reconstruction
 """
 
 import numpy as np
@@ -64,7 +62,6 @@ class ThreeD_Navigator:
             between the measured TDOA and the calculated TDOA. The calculated TDOA is calculated using
             the distance between the candidate location and the station coordinates.
             """
-
             total_error: float = 0
             for i in range(len(stations_coords)):
                 for j in range(i + 1, len(stations_coords)):
@@ -119,7 +116,7 @@ class ThreeD_Navigator:
     def calculate_initial_guess(self, stations: list[int], arrival_times: list[float]) -> list[float]: 
         """
         Predicts the initial guess using the KNN model trained on simulated data.
-        This is specific to the RNO-G data. For stations 11, 12, 13, 21, 22, 23, 24
+        This is specific to the RNO-G. Stations 11, 12, 13, 21, 22, 23, 24.
 
         Parameters
         ----------
